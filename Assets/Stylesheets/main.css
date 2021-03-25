@@ -1,0 +1,338 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+
+/*
+    ======================================
+    Grid Settings
+    =====================================
+*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+
+/*
+    ======================================
+    Main Content
+    =====================================
+*/
+
+.main-content {
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: 24px;
+    font-family: arial, sans-serif;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-top: 24px;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar {
+    background: #fff;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    box-shadow: none;
+    height: 44px;
+    margin-top: 20px;
+    padding-top: 15px;
+    text-align: left;
+    width: 584px;
+    max-width: 584px;
+    background: url(../images/512px-Google_Magnifying_Glass.svg.png) no-repeat left;
+    background-size: 20px 20px;
+    background-position: 20px 11px;
+}
+
+.search-bar:hover {
+    background-color: #fff;
+    box-shadow: 0 1px 6px rgba(32, 33, 36, .28);
+    border-color: rgba(223, 225, 229, 0);
+}
+
+input[type="text"] {
+    padding: 0px 50px;
+    line-height: 50px;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
+}
+
+.btn {
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    cursor: pointer;
+    font-size: 15px;
+    height: 34px;
+    line-height: 27px;
+    min-width: 54px;
+}
+
+.btn:hover {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+    border: 1px solid #dadce0;
+    color: #202124;
+}
+
+#lucky-btn {
+    margin-left: 10px;
+}
+
+
+/*
+  ========================================
+  Links
+  ========================================
+*/
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.google-daily-link {
+    padding-top: 50px;
+    color: blue;
+    font-size: 13px;
+}
+
+.google-daily-link:hover {
+    text-decoration: underline;
+}
+
+.language {
+    padding-top: 50px;
+    font-size: 13px;
+}
+
+.language a {
+    color: blue;
+}
+
+a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+/*
+    ======================================
+    Header
+    =====================================
+*/
+
+.google-header {
+    grid-area: 1/1/2/-1;
+}
+
+.header-nav li {
+    display: inline;
+}
+
+.left-nav {
+    float: left;
+    padding-top: 17px;
+    padding-left: 22px;
+}
+
+.right-nav {
+    float: right;
+    padding-top: 17px;
+    padding-right: 22px;
+}
+
+
+/*
+    ======================================
+    Footer
+    =====================================
+*/
+
+.google-footer {
+    grid-area: 5/1/6/4;
+}
+
+.google-footer p {
+    padding: 12px 0 0 20px;
+}
+
+.footer-nav li {
+    display: inline-block;
+    margin-top: 25px;
+}
+
+.footer-container {
+    margin-top: 20px;
+    padding-bottom: 15px;
+    background: #f2f2f2;
+}
